@@ -1,13 +1,16 @@
-import Navbar from './components/Navbar'
-// import './App.css'
+import NavBar from './components/Navbar'
+import Home from './components/Home'
+import './App.css'
 
 function App() {
  
 
   return (
     <>
+   
       <div>
-      <Navbar/>
+      <NavBar/>
+      <Home/>
        </div>
     </>
   )
