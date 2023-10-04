@@ -14,7 +14,7 @@ function Nav() {
   }
   return (
     <>
-      <div className="flex items-center justify-between p-10 lg:flex-row bg-[#7E8F90] text-white">
+      <div className="flex items-center justify-between p-8 lg:flex-row bg-[#7E8F90] text-white">
         <div>
           <a
             href="#"
