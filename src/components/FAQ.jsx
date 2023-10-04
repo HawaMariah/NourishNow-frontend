@@ -22,11 +22,11 @@ function FAQ() {
   <section class="mb-32">
     <div class="grid gap-4 md:grid-cols-3">
       <div style={{backgroundColor:'#7E8F90'}} class="mb-6 md:mb-0">
-        <h2 class="mb-16 mt-20 ml-4 text-4xl font-bold ">DELIVERY</h2>
-        <h2 class="mb-16 ml-4 text-4xl  font-bold">ACCOUNT</h2>
-        <h2 class="mb-16 ml-4 text-4xl font-bold">FIND US</h2>
-        <h2 class="mb-16 ml-4 text-4xl font-bold">JOIN US</h2>
-        <h2 class="mb-16 ml-4 text-4xl font-bold">REGISTRATION</h2>
+        <h2 class="mb-16 mt-20 ml-4 text-4xl  ">DELIVERY</h2>
+        <h2 class="mb-16 ml-4 text-4xl  ">ACCOUNT</h2>
+        <h2 class="mb-16 ml-4 text-4xl ">FIND US</h2>
+        <h2 class="mb-16 ml-4 text-4xl ">JOIN US</h2>
+        <h2 class="mb-16 ml-4 text-4xl ">REGISTRATION</h2>
 
 
       </div>
