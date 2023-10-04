@@ -7,7 +7,7 @@ function FAQ() {
  <section style={{backgroundColor:'#7E8F90'}} class="mb-24 text-center">
     <div class="flex justify-start object-fill">
       <div class="">
-        <h2 style={{fontColor:"white"}} class="mb-12 ml-2 mt-2 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl">
+        <h2 style={{fontColor:"white"}} class="mb-12 ml-2 mt-2 text-5xl text-white font-bold tracking-tight md:text-6xl xl:text-7xl">
           FAQs 
            </h2>
            
@@ -22,11 +22,11 @@ function FAQ() {
   <section class="mb-32">
     <div class="grid gap-4 md:grid-cols-3">
       <div style={{backgroundColor:'#7E8F90'}} class="mb-6 md:mb-0">
-        <h2 class="mb-16 mt-20 ml-4 text-4xl  ">DELIVERY</h2>
-        <h2 class="mb-16 ml-4 text-4xl  ">ACCOUNT</h2>
-        <h2 class="mb-16 ml-4 text-4xl ">FIND US</h2>
-        <h2 class="mb-16 ml-4 text-4xl ">JOIN US</h2>
-        <h2 class="mb-16 ml-4 text-4xl ">REGISTRATION</h2>
+        <h2 class="mb-16 mt-20 ml-4 text-4xl text-white  ">DELIVERY</h2>
+        <h2 class="mb-16 ml-4 text-4xl text-white  ">ACCOUNT</h2>
+        <h2 class="mb-16 ml-4 text-4xl text-white ">FIND US</h2>
+        <h2 class="mb-16 ml-4 text-4xl text-white ">JOIN US</h2>
+        <h2 class="mb-16 ml-4 text-4xl text-white ">REGISTRATION</h2>
 
 
       </div>
