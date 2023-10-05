@@ -1,0 +1,72 @@
+/* App.css */
+.App {
+  text-align: center;
+  margin-top: 20px;
+}
+/* App.css */
+body {
+  background-image: url('../images/children bg.jpg'); /* Path to your background image */
+  background-size: cover; /* Scale the image to cover the entire body */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  background-attachment: fixed; /* Fixed background position */
+  background-position: center center; /* Center the image horizontally and vertically */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.event-list {
+  flex-basis: 70%;
+}
+
+.event-form {
+  flex-basis: 30%;
+}
+
+h1 {
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 5px 0;
+}
+
+/* Add these styles to your App.css file */
+.event-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.event-info img {
+  max-width: 200px; /* Adjust image size as needed */
+  margin-right: 20px;
+}
+
+.event-details {
+  flex: 1;
+}
+
+/* Enhance descriptions and add more styling */
+.event-details p {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #555;
+  line-height: 1.4;
+  /* Add more styling as desired */
+}
+
+header img {
+  max-width: 75%;
+  /* width: 90%; */
+  height: 10%; 
+}
