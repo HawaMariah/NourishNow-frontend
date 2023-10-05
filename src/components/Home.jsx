@@ -2,8 +2,12 @@ import React from "react";
 import image1 from "../images/1.webp";
 import image2 from "../images/2.jpeg";
 import image3 from "../images/3.jpg";
-import image4 from "../images/4.webp";
+import image4 from "../images/6.jpeg";
 import image5 from "../images/5.webp";
+import image6 from "../images/9.jpg"
+import image7 from "../images/8.jpg"
+import image8 from "../images/10.jpg"
+import image9 from "../images/11.jpg"
 
 function Home() {
   return (
@@ -40,7 +44,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto my-8 text-center">
+      <div className="bg-[#7E8F90] text-white rounded-full container mx-auto my-8 pt-9 pb-1  text-center px-20">
         <h2 className="text-4xl font-bold mb-4">About Us</h2>
         <p className="text-lg mb-8 mx-auto  max-w-none">
           Welcome to <strong>NourishNow</strong> ,a passionate team dedicated to
@@ -62,7 +66,7 @@ function Home() {
           we can build a brighter, more nourished future.
         </p>
       </div>
-      <div className="max-w-7xl max-h-6xl mx-auto p-4 bg-[#7E8F90] ">
+      <div className="max-w-7xl  mx-auto ">
         <iframe
           className="w-full h-96"
           src="https://www.youtube.com/embed/1ZvdF5-1HQ0?autoplay=1"
@@ -73,17 +77,17 @@ function Home() {
 
       <div className="m-20 max-w-full">
         <div className="grid justify-items-center m-10">
-        <h2 className="text-4xl font-bold mb-4">Articles</h2>
+          <h2 className="text-4xl font-bold mb-4">Articles</h2>
         </div>
         <div className="">
-          <div className=" grid grid-cols-1 sm:grid-cols-2 gap-4 p-5">
-            <div className="max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl hover:animate-pulse">
+          <div className="  grid grid-cols-1 sm:grid-cols-2 gap-4 p-5">
+            <div className=" bg-[#7E8F90] text-white max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl hover:animate-pulse">
               <div className="md:flex">
                 <div className="p-8">
                   <div className="uppercase tracking-wide text-sm font-semibold">
-                  Africa food crisis
+                    Africa food crisis
                   </div>
-                 
+
                   <p className="mt-2">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Nostrum esse a eos officia, odit soluta ullam nulla dolorem
@@ -92,17 +96,23 @@ function Home() {
                   </p>
                 </div>
                 <div className="md:shrink-0 p-5">
-                  <img src={image2} alt="" width={150} height={150} />
+                  <img
+                    src={image2}
+                    alt=""
+                    width={150}
+                    height={150}
+                    className="rounded-xl"
+                  />
                 </div>
               </div>
             </div>
-            <div className="max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl hover:animate-pulse">
+            <div className=" bg-[#7E8F90] text-white max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl hover:animate-pulse">
               <div className="md:flex">
                 <div className="p-8">
                   <div className="uppercase tracking-wide text-sm font-semibold">
                     WATER SUPPLY
                   </div>
-                 
+
                   <p className="mt-2">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Nostrum esse a eos officia, odit soluta ullam nulla dolorem
@@ -111,7 +121,13 @@ function Home() {
                   </p>
                 </div>
                 <div className="md:shrink-0 p-5">
-                  <img src={image3} alt="" width={150} height={150} />
+                  <img
+                    src={image3}
+                    alt=""
+                    width={170}
+                    height={150}
+                    className="rounded-xl"
+                  />
                 </div>
               </div>
             </div>
@@ -119,13 +135,13 @@ function Home() {
           <hr className="bg-black" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-5">
-            <div className="max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl hover:animate-pulse">
+            <div className="bg-[#7E8F90] text-white max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl hover:animate-pulse">
               <div className="md:flex">
                 <div className="p-8">
                   <div className="uppercase tracking-wide text-sm font-semibold">
                     FOOD SUPPLY
                   </div>
-                 
+
                   <p className="mt-2">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Nostrum esse a eos officia, odit soluta ullam nulla dolorem
@@ -134,17 +150,23 @@ function Home() {
                   </p>
                 </div>
                 <div className="md:shrink-0 p-5">
-                  <img src={image4} alt="" width={150} height={150} />
+                  <img
+                    src={image4}
+                    alt=""
+                    width={150}
+                    height={150}
+                    className="rounded-xl"
+                  />
                 </div>
               </div>
             </div>
-            <div className="max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl hover:animate-pulse">
+            <div className="bg-[#7E8F90] text-white  max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl hover:animate-pulse">
               <div className="md:flex">
                 <div className="p-8">
                   <div className="uppercase tracking-wide text-sm font-semibold">
                     WASH YOUR HANDS INITIATIVE
                   </div>
-                 
+
                   <p className="mt-2">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Nostrum esse a eos officia, odit soluta ullam nulla dolorem
@@ -153,13 +175,106 @@ function Home() {
                   </p>
                 </div>
                 <div className="md:shrink-0 p-5">
-                  <img src={image5} alt="" width={150} height={150} />
+                  <img
+                    src={image5}
+                    alt=""
+                    width={150}
+                    height={150}
+                    className="rounded-xl"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <section className=" p-10    px-4 ">
+        <div className="mx-auto max-w-3xl text-center  ">
+          <h3 className="mb-6 text-3xl font-bold">Testimonials</h3>
+          <p className="mb-6 pb-2 text-xl md:mb-12">
+            Here's what some of our valued beneficiaries and partners have to
+            say about their experience with Nourishnow's feeding program. Their
+            stories serve as a testament to the impact we're making together in
+            the community. We're honored to share their heartfelt testimonials.
+          </p>
+        </div>
+
+        <div className="grid gap-12 text-center md:grid-cols-2">
+          {/* First Testimonial */}
+          <div className="mb-6 md:mb-0">
+            <div className="mb-6 flex justify-center">
+              <img
+                src={image9}
+                className="w-24 rounded-full shadow-lg dark:shadow-black/30"
+                alt="Testimonial Avatar 1"
+              />
+            </div>
+            <p className="my-4 text-xl ">
+              "NourishNow has been a lifeline for me and my family. The
+              nutritious meals they provide have eased our burdens and given us
+              hope. We're so grateful for their unwavering support"
+            </p>
+            <p className="italic">- Anna Morian</p>
+          </div>
+
+          {/* Second Testimonial */}
+          <div className="mb-0">
+            <div className="mb-6 flex justify-center">
+              <img
+                src={image7}
+                className="w-24 rounded-full shadow-lg dark:shadow-black/30"
+                alt="Testimonial Avatar 2"
+              />
+            </div>
+            <p className="my-4 text-xl ">
+              "Partnering with Food4Education has been a rewarding experience.
+              Their commitment to the community is inspiring, and we're proud to
+              contribute to their mission. Together, we're making a positive
+              impact."
+            </p>
+            <p className="italic">- Teresa May</p>
+          </div>
+          {/* third testimonial */}
+          <div className="mb-0">
+            <div className="mb-6 flex justify-center">
+              <img
+                src={image8}
+                className="w-24 rounded-full shadow-lg dark:shadow-black/30"
+                alt="Testimonial Avatar 2"
+              />
+            </div>
+            <p className="my-4 text-xl ">
+              "NourishNow not only feeds our bodies but also our souls. Their
+              kindness and dedication are truly heartwarming. They've shown me
+              that there are people who care and are willing to help."
+            </p>
+            <p className="italic">- Angie Bhaddie</p>
+          </div>
+          {/* fourth testimonial */}
+          <div className="mb-0">
+            <div className="mb-6 flex justify-center">
+              <img
+                src={image6}
+                className="w-24 rounded-full shadow-lg dark:shadow-black/30"
+                alt="Testimonial Avatar 2"
+              />
+            </div>
+            <p className="my-4 text-xl ">
+              "Supporting Food4Education has been one of the most fulfilling
+              experiences. Knowing that my contributions directly nourish those
+              in need is a privilege. I'm proud to be a part of this incredible
+              cause."
+            </p>
+            <p className="italic">- Claus Michaelson</p>
+            
+          </div>
+
+        </div>
+        
+      </section>
+      
+      <div className="pt-20"></div>
     </>
   );
 }
