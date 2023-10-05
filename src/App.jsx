@@ -1,4 +1,3 @@
-
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import "./App.css";
@@ -16,6 +15,9 @@ function App() {
         <NavBar />
         <Routes>
           <Route exact path="/" element={<Home />} />
+          {/* <Route exact path="/donate" element={<Donate />} />
+          <Route exact path="/events" element={<Events />} />
+          <Route exact path="/contact" element={<Contact />} /> */}
           <Route exact path="/faqs" element={<FAQ />} />
         </Routes>
         <Footer />
