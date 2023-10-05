@@ -9,6 +9,7 @@ import Home from "./components/Home";
 import Donations from './components/Donations'
 import DonateFundsForm from './components/DonateFundsForm'
 import ItemForm from './components/ItemForm'
+import ContactUs from "./components/ContactUs";
 
 
 function App() {
@@ -25,16 +26,15 @@ function App() {
           <Route exact path="/donate" element={<Donations />} />
           <Route exact path="/donatefundsform" element={<DonateFundsForm />} />
           <Route exact path="/itemsform" element={<ItemForm />} />
-          {/* <Route exact path="/events" element={<Events />} />
-          <Route exact path="/contact" element={<Contact />} /> */}
+          {/* <Route exact path="/events" element={<Events />} /> */}
+          <Route exact path="/contact" element={<ContactUs />} />
           <Route exact path="/faqs" element={<FAQ />} />
         </Routes>
         {/* <AboutUs/> */}
      
-      {/* <ItemForm/> */}
       
       </Router>
-    </div>
+          </div>
     </>
   );
 }
