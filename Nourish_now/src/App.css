@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.custom-list li {
+    color: rgb(1, 11, 11);
+  }
+
+.font-shadows {
+  font-family: 'Shadows Into Light', cursive;
+}
+.fade-in-image {
+  opacity: 80%;
+}
+
+.fade-in-image:hover {
+  opacity: 100%;
+  transition: opacity 0.5s;
+}
