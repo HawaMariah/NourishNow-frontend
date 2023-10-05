@@ -27,6 +27,7 @@ function SignIn() {
         setCookie('user', JSON.stringify(data), { path: '/' });
         alert("Sign In success!");
         window.location.href = '/';
+       
         
       })
       .catch((error) => {
@@ -36,7 +37,9 @@ function SignIn() {
 
   return (
     <div className="flex items-center justify-center h-screen ">
+      
       <form className="bg-[#7E8F90] text-white shadow-md rounded px-10 pt-10 pb-10 mb-4" onSubmit={handleSubmit}>
+      <h3 className='flex justify-center '>sign in to continue:</h3>
         <h2 className="text-2xl font-bold mb-4 text-center">Sign In</h2>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
