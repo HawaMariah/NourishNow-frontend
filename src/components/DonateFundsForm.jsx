@@ -42,6 +42,8 @@ const MyCheckbox = ({ children, ...props }) => {
   );
 };
 
+
+
 const DonateFundsForm = () => {
   return (
     <div className="flex items-center justify-center h-screen">
@@ -67,7 +69,8 @@ const DonateFundsForm = () => {
             .required('Required')
             .oneOf([true], 'Required'),
         })}
-        onSubmit={(values) => console.log(JSON.stringify(values, null, 2))}
+        onSubmit={
+          fetch(`http://127.0.0.1:5000/donateFunds/`,)}
       >
         <Form className="form p-6 bg-gray-300 rounded-lg w-2/5 h-100 shadow-md flex flex-col items-center justify-center">
           <div className="mb-4">
