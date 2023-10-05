@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./Footer";
 import image1 from "../images/1.webp";
 import image2 from "../images/2.jpeg";
 import image3 from "../images/3.jpg";
@@ -274,7 +275,9 @@ function Home() {
         
       </section>
       
-      <div className="pt-20"></div>
+      <div className="pt-20">
+      <Footer />
+      </div>
     </>
   );
 }
