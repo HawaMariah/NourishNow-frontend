@@ -42,11 +42,12 @@ const Footer = () => {
         </div>
 
         <p className="text-center mb-4">
-          © 2023 NourishNow – Feeding The Future
+        &copy; {new Date().getFullYear()} NourishNow – Feeding The Future
         </p>
         <p className="text-center">
           Made with ❤️ by Maria
         </p>
+       
       </div>
     </footer>
   );
