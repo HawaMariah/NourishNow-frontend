@@ -4,9 +4,11 @@ import App from './App.jsx'
 import { CookiesProvider } from 'react-cookie'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  <CookiesProvider>
   <React.StrictMode>
-    <CookiesProvider>
+   
     <App />
-    </CookiesProvider>
+   
   </React.StrictMode>,
+  </CookiesProvider>
 )

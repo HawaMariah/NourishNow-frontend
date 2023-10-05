@@ -4,7 +4,7 @@ import { BiHeart } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import { HiMenuAlt1 } from "react-icons/hi";
 import { useState } from "react";
-function Nav() {
+function Navbar() {
   const [toggle, setToggle] = useState(false);
 
   function openMenu() {
@@ -54,6 +54,12 @@ function Nav() {
             >
               FAQs
             </Link>
+            <Link
+              to="/signin"
+              className="hover:bg-gray-500 rounded-full px-5 py-2 text-xl"
+            >
+              SignIn
+            </Link>
           </div>
           <div className="ssm:block lg:hidden">
             {toggle ? (
@@ -87,6 +93,9 @@ function Nav() {
               <li className="text-xl mb-2 cursor-pointer">
                 <Link to="/faqs">FAQs</Link>
               </li>
+              <li className="text-xl mb-2 cursor-pointer">
+                <Link to="/signin">SignIn</Link>
+              </li>
             </ul>
           </div>
         ) : (
@@ -97,4 +106,4 @@ function Nav() {
   );
 }
 
-export default Nav;
+export default Navbar;

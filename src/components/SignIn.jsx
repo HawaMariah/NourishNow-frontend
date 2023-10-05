@@ -1,12 +1,14 @@
-// src/SignIn.js
+
 import React, { useState } from 'react';
 import { useCookies } from 'react-cookie';
+
+import { Link } from 'react-router-dom';
 
 function SignIn() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [cookies, setCookie, removeCookie] = useCookies(['user']);
-
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,49 +24,57 @@ function SignIn() {
     })
       .then((response) => response.json())
       .then((data) => {
-        // Handle the response data as needed
         setCookie('user', JSON.stringify(data), { path: '/' });
-        console.log(cookies.user);
+        alert("Sign In success!");
+        window.location.href = '/';
         
       })
       .catch((error) => {
-        // Handle errors here
         console.error(error);
       });
-    alert("Sign In success!");
-   
-    
-    ;
   };
 
   return (
-    <div className="sign-in">
-      <h2>Sign In</h2>
-      <p>Hello {cookies.user.email}</p>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
+    <div className="flex items-center justify-center h-screen ">
+      <form className="bg-[#7E8F90] text-white shadow-md rounded px-10 pt-10 pb-10 mb-4" onSubmit={handleSubmit}>
+        <h2 className="text-2xl font-bold mb-4 text-center">Sign In</h2>
+        <div className="mb-4">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+            Email
+          </label>
           <input
-            type="email"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="email"
-            name="email"
+            type="email"
+            placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="password">Password:</label>
+        <div className="mb-6">
+          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+            Password
+          </label>
           <input
-            type="password"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="password"
-            name="password"
+            type="password"
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
         </div>
-        <button type="submit">Sign In</button>
+        <div className="flex items-center justify-center">
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+          >
+            Sign In
+          </button>
+        </div>
+        <div className='flex pt-10  justify-center' >Dont have an account?? <Link to="/signUp" className='font-bold underline ml-2' >SignUp</Link></div>
       </form>
     </div>
   );

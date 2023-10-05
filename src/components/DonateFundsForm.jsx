@@ -1,6 +1,8 @@
+
 import { Formik, Field, Form, ErrorMessage, useField } from 'formik';
 import * as Yup from 'yup';
 import image1 from "../images/12.jpeg"
+import { useCookies } from 'react-cookie';
 
 
 const MyTextInput = ({ label, ...props }) => {
@@ -45,6 +47,9 @@ const MyCheckbox = ({ children, ...props }) => {
 
 
 const DonateFundsForm = () => {
+  const [cookies] = useCookies(['user']); 
+  const user_id =cookies.user[0].id
+  console.log(cookies.user)
   return (
     <div className="flex items-center justify-center h-screen">
       <Formik
@@ -69,8 +74,34 @@ const DonateFundsForm = () => {
             .required('Required')
             .oneOf([true], 'Required'),
         })}
-        onSubmit={
-          fetch(`http://127.0.0.1:5000/donateFunds/`,)}
+        onSubmit={(values, { setSubmitting }) =>{
+
+        
+          fetch(`http://127.0.0.1:5000/donateFunds/${user_id}`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              amount: values.amount,
+             
+            }),
+          })
+          
+            // Handle success
+            .then((response) => response.json())
+            .then((data) => {
+              console.log(data)
+          })
+          .catch((error) => {
+            // Handle error
+            console.error('API error:', error);
+          })
+          .finally(() => {
+            setSubmitting(false);
+          });
+        }}
       >
         <Form className="form p-6 bg-gray-300 rounded-lg w-2/5 h-100 shadow-md flex flex-col items-center justify-center">
           <div className="mb-4">
