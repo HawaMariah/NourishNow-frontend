@@ -25,13 +25,15 @@ function SignIn() {
         // Handle the response data as needed
         setCookie('user', JSON.stringify(data), { path: '/' });
         console.log(cookies.user);
+        alert("Sign In success!");
         
       })
       .catch((error) => {
         // Handle errors here
         console.error(error);
       });
-    alert("Sign In success!");
+    
+
    
     
     ;
@@ -40,7 +42,7 @@ function SignIn() {
   return (
     <div className="sign-in">
       <h2>Sign In</h2>
-      <p>Hello {cookies.user.email}</p>
+      
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="email">Email:</label>

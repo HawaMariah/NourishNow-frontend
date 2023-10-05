@@ -55,6 +55,8 @@ import DonateFundsForm from './components/DonateFundsForm'
 import ItemForm from './components/ItemForm'
 import ContactUs from "./components/ContactUs";
 import SignIn from "./components/SignIn";
+import SignUp from "./components/SignUp";
+import Profile from "./components/Profile";
 
 
 function App() {
@@ -77,6 +79,8 @@ function App() {
           <Route exact path="/contact" element={<ContactUs />} />
           <Route exact path="/faqs" element={<FAQ />} />
           <Route exact path="/signIn" element={<SignIn />} />
+          <Route exact path="/signUp" element={<SignUp />} />
+          <Route exact path="/profile" element={<Profile />} />
         </Routes>
         {/* <AboutUs/> */}
      
