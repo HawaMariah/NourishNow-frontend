@@ -4,37 +4,39 @@ import * as Yup from 'yup';
 const MyTextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   return (
-    <>
-      <label htmlFor={props.name}>{label}</label>
+    <div className="mb-4">
+      <label htmlFor={props.name} className="block text-sm font-medium text-gray-600 mb-1">
+        {label}
+      </label>
       <input
         {...field}
         {...props}
         className="block w-full mt-1 p-2 border rounded shadow-sm"
       />
       {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
+        <div className="text-sm text-red-500">{meta.error}</div>
       ) : null}
-    </>
+    </div>
   );
 };
 
 const MyCheckbox = ({ children, ...props }) => {
   const [field, meta] = useField({ ...props, type: 'checkbox' });
   return (
-    <>
-      <label className="checkbox">
+    <div className="mb-4">
+      <label className="flex items-center">
         <input
           type="checkbox"
           {...field}
           {...props}
           className="mr-2 leading-tight"
         />
-        {children}
+        <span className="text-sm font-medium text-gray-600">{children}</span>
       </label>
       {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
+        <div className="text-sm text-red-500">{meta.error}</div>
       ) : null}
-    </>
+    </div>
   );
 };
 
@@ -45,7 +47,7 @@ const ItemForm = () => {
         initialValues={{
           name: '',
           email: '',
-          items: '', 
+          items: '',
           text: '',
           terms: false,
         }}
@@ -57,7 +59,6 @@ const ItemForm = () => {
             .email('Invalid email address')
             .required('Email Required'),
           items: Yup.string().required('Select at least one item'),
-        //   text: Yup.string().min(10, 'Not less than 10 symbols'),
           terms: Yup.boolean()
             .required('Required')
             .oneOf([true], 'Required'),
@@ -95,10 +96,10 @@ const ItemForm = () => {
             <option value="Medical Supplies">Medical Supplies</option>
             <option value="Hygiene Products">Hygiene Products</option>
           </Field>
-          <ErrorMessage component="div" className="error" name="items" />
+          <ErrorMessage component="div" className="text-sm text-red-500" name="items" />
           <label htmlFor="text">Your message</label>
           <Field id="text" name="text" as="textarea" />
-          <ErrorMessage component="div" className="error" name="text" />
+          <ErrorMessage component="div" className="text-sm text-red-500" name="text" />
           <MyCheckbox name="terms">Agree with privacy policy</MyCheckbox>
           <button
             type="submit"

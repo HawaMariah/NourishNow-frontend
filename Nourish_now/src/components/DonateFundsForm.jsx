@@ -4,37 +4,39 @@ import * as Yup from 'yup';
 const MyTextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   return (
-    <>
-      <label htmlFor={props.name}>{label}</label>
+    <div className="mb-4">
+      <label htmlFor={props.name} className="block text-sm font-medium text-gray-600 mb-1">
+        {label}
+      </label>
       <input
         {...field}
         {...props}
         className="block w-full mt-1 p-2 border rounded shadow-sm"
       />
       {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
+        <div className="text-sm text-red-500">{meta.error}</div>
       ) : null}
-    </>
+    </div>
   );
 };
 
 const MyCheckbox = ({ children, ...props }) => {
   const [field, meta] = useField({ ...props, type: 'checkbox' });
   return (
-    <>
-      <label className="checkbox">
+    <div className="mb-4">
+      <label className="flex items-center">
         <input
           type="checkbox"
           {...field}
           {...props}
           className="mr-2 leading-tight"
         />
-        {children}
+        <span className="text-sm font-medium text-gray-600">{children}</span>
       </label>
       {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
+        <div className="text-sm text-red-500">{meta.error}</div>
       ) : null}
-    </>
+    </div>
   );
 };
 
@@ -59,7 +61,6 @@ const CustomForm = () => {
             .required('Email Required'),
           amount: Yup.number().required('Required').min(5, 'Not less than 5'),
           currency: Yup.string().required('Select currency'),
-          // text: Yup.string().min(10, 'Not less than 10 symbols'),
           terms: Yup.boolean()
             .required('Required')
             .oneOf([true], 'Required'),
@@ -67,9 +68,9 @@ const CustomForm = () => {
         onSubmit={(values) => console.log(JSON.stringify(values, null, 2))}
       >
         <Form className="form p-6 bg-gray-300 rounded-lg w-2/5 h-100 shadow-md flex flex-col items-center justify-center">
-        <div className="mb-4">
-    <img src="/images/hand.png" alt="Logo" className="w-16 h-16" />
-  </div>
+          <div className="mb-4">
+            <img src="/images/hand.png" alt="Logo" className="w-16 h-16" />
+          </div>
           <h2 className="text-2xl mb-4">Send Fund Donation</h2>
           <MyTextInput
             label="Your name"
