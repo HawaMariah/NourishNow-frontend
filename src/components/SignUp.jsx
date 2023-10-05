@@ -1,5 +1,4 @@
-
-
+// src/SignUp.js
 import React, { useState } from 'react';
 import { useCookies } from 'react-cookie';
 
@@ -9,6 +8,7 @@ function SignUp() {
   const [password, setPassword] = useState('');
   const [cookies, setCookie, removeCookie] = useCookies(['user']);
 
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch('http://127.0.0.1:5000/signUp', {
@@ -17,7 +17,7 @@ function SignUp() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        name: name,
+        name:name,
         email: email,
         password: password,
       }),
